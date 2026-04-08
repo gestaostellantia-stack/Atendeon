@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Portal de Atendimento Oficial</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { margin:0; font-family: Arial; background:#f4f4f4; }
+    header { background:#0a2540; color:white; padding:25px; text-align:center; }
+    section { padding:20px; }
+    .box { background:white; padding:20px; margin-bottom:20px; border-radius:10px; }
+    .btn {
+      display:inline-block;
+      background:#007bff;
+      color:white;
+      padding:12px 20px;
+      border-radius:5px;
+      text-decoration:none;
+    }
+    footer { background:#ddd; text-align:center; padding:15px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Portal Oficial de Atendimento</h1>
+  <p>Suporte confiável e seguro ao cliente</p>
+</header>
+
+<section>
+  <div class="box">
+    <h2>Sobre nós</h2>
+    <p>Atuamos com atendimento digital e orientação ao cliente, garantindo transparência e qualidade no suporte.</p>
+  </div>
+
+  <div class="box">
+    <h2>Serviços</h2>
+    <ul>
+      <li>Atendimento especializado</li>
+      <li>Suporte online</li>
+      <li>Orientação de serviços</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h2>Contato</h2>
+    <p>Fale com nosso atendimento:</p>
+    <a class="btn" href="https://wa.me/5511960521905">Iniciar Atendimento</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 - Todos os direitos reservados</p>
+</footer>
+
+</body>
+</html>
