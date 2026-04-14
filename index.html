@@ -1,141 +1,214 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Expresso Baterias LP LTDA</title>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Central de Atendimento</title>
 
 <style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #f4f4f4;
+:root{
+  --primary:#1d4ed8;     /* azul principal */
+  --primary2:#1e3a8a;    /* azul escuro */
+  --bg:#0b1220;
+  --card:#111827;
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+  --shadow:0 20px 60px rgba(0,0,0,.6);
 }
 
-header {
-    background: #111;
-    color: #fff;
-    padding: 25px;
-    text-align: center;
+*{box-sizing:border-box;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial}
+
+body{
+  margin:0;
+  background:linear-gradient(180deg,#020617,#0b1220);
+  color:var(--text);
 }
 
-nav {
-    background: #222;
-    padding: 10px;
-    text-align: center;
+.container{max-width:1100px;margin:auto;padding:40px 20px}
+
+/* HEADER */
+.header{display:flex;align-items:center;gap:14px;margin-bottom:40px}
+.logo{
+  width:46px;height:46px;border-radius:14px;
+  background:#fff;border:1px solid rgba(255,255,255,.1);
+  box-shadow:0 10px 25px rgba(0,0,0,.5);object-fit:contain
+}
+.header h1{margin:0;font-size:22px}
+.header span{font-size:13px;color:var(--muted)}
+
+/* HERO */
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center}
+.hero h2{font-size:34px;margin:0}
+.hero p{margin-top:12px;line-height:1.5;color:var(--muted)}
+
+.btn{
+  display:inline-block;margin-top:18px;padding:14px 24px;border-radius:999px;
+  background:linear-gradient(135deg,var(--primary2),var(--primary));
+  color:#fff;font-weight:800;text-decoration:none;
+  box-shadow:0 18px 40px rgba(29,78,216,.35)
 }
 
-nav a {
-    color: #fff;
-    margin: 10px;
-    text-decoration: none;
-    font-weight: bold;
+/* CARD */
+.card{
+  background:var(--card);
+  padding:18px;
+  border-radius:22px;
+  box-shadow:var(--shadow)
 }
 
-.container {
-    padding: 30px;
+.service{
+  display:block;
+  padding:14px;
+  margin-bottom:10px;
+  border-radius:16px;
+  background:rgba(29,78,216,.1);
+  border:1px solid rgba(29,78,216,.3);
+  font-weight:800;
+  text-decoration:none;
+  color:#fff;
 }
 
-.section {
-    background: #fff;
-    padding: 25px;
-    margin-bottom: 20px;
-    border-radius: 8px;
+.service span{float:right;color:#60a5fa}
+
+/* SPLIT */
+.split{
+  margin-top:80px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+  align-items:center
 }
 
-h2 {
-    color: #111;
+.split h3{font-size:28px;margin:0}
+.split h4{margin-top:10px;font-size:18px}
+.split p{margin-top:10px;line-height:1.6;color:var(--muted)}
+
+.image{
+  height:320px;
+  border-radius:22px;
+  background:url("https://i.imgur.com/AECQVlW.png") center/cover no-repeat;
+  box-shadow:var(--shadow)
 }
 
-footer {
-    background: #111;
-    color: white;
-    text-align: center;
-    padding: 20px;
+/* VALUES */
+.values{
+  margin-top:90px;
+  background:#020617;
+  color:#fff;
+  padding:60px 20px
+}
+
+.values h3{text-align:center;font-size:28px;margin:0}
+
+.grid{
+  max-width:1100px;
+  margin:40px auto 0;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px
+}
+
+.box{
+  background:rgba(255,255,255,.05);
+  border-radius:18px;
+  padding:20px;
+  border:1px solid rgba(255,255,255,.08)
+}
+
+.box strong{font-size:18px}
+.box p{margin-top:10px;color:#9ca3af;line-height:1.6}
+
+/* FOOTER */
+footer{
+  background:#020617;
+  border-top:1px solid rgba(255,255,255,.08);
+  padding:20px 0;
+  text-align:center;
+  color:#9ca3af
+}
+
+@media(max-width:900px){
+  .hero,.split,.grid{grid-template-columns:1fr}
+  .hero h2{font-size:28px}
 }
 </style>
 </head>
 
 <body>
 
-<header>
-    <h1>EXPRESSO BATERIAS LP LTDA</h1>
-    <p>CNPJ: 62.308.706/0001-72</p>
-</header>
-
-<nav>
-    <a href="#sobre">Quem Somos</a>
-    <a href="#servicos">Produtos</a>
-    <a href="#entrega">Entrega</a>
-    <a href="#contato">Contato</a>
-    <a href="#privacidade">Privacidade</a>
-    <a href="#termos">Termos</a>
-</nav>
+<script>
+  const WHATSAPP_ATENDIMENTO = "5511961474835";
+  const WHATSAPP_2VIA       = "5511961474835";
+  const WHATSAPP_SUPORTE    = "5511961474835";
+  const WHATSAPP_OUTROS     = "5518996329743";
+</script>
 
 <div class="container">
+  <div class="header">
+    <img src="https://i.imgur.com/U2I98h6.png" class="logo">
+    <div>
+      <h1>Central de Atendimento</h1>
+      <span>Serviços e suporte via WhatsApp</span>
+    </div>
+  </div>
 
-<div class="section" id="sobre">
-    <h2>Quem Somos</h2>
-    <p>
-    A Expresso Baterias LP LTDA é uma empresa especializada na comercialização de baterias automotivas, atendendo clientes de forma direta com agilidade, transparência e qualidade.
-    </p>
-    <p>
-    Trabalhamos com produtos de procedência confiável, oferecendo suporte na escolha da bateria ideal para cada veículo.
-    </p>
+  <div class="hero">
+    <div>
+      <h2>Solicite Atendimento</h2>
+      <p>Selecione o serviço desejado e inicie o atendimento seguro pelo WhatsApp.</p>
+      <a class="btn" id="btnAtendimento">Iniciar Atendimento Seguro</a>
+    </div>
+
+    <div class="card">
+      <a class="service" id="svc2Via">
+        2ª Via de Boleto <span>Acessar</span>
+      </a>
+      <a class="service" id="svcSuporte">
+        Suporte Técnico <span>Acessar</span>
+      </a>
+      <a class="service" id="svcOutros">
+        Outros Assuntos <span>Acessar</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="split">
+    <div>
+      <h3>Soluções na palma<br>da sua mão</h3>
+      <h4>Facilite seu atendimento</h4>
+      <p>Tenha um fluxo simples, rápido e seguro para solicitar suporte e serviços.</p>
+      <p>Processos organizados para tornar o atendimento mais eficiente e acessível.</p>
+    </div>
+    <div class="image"></div>
+  </div>
 </div>
 
-<div class="section" id="servicos">
-    <h2>Nossos Produtos</h2>
-    <ul>
-        <li>Baterias para carros de passeio</li>
-        <li>Baterias para veículos utilitários</li>
-        <li>Baterias para frotas empresariais</li>
-        <li>Suporte na escolha do produto correto</li>
-    </ul>
-</div>
-
-<div class="section" id="entrega">
-    <h2>Entrega</h2>
-    <p>
-    Após a confirmação do pedido, realizamos a entrega da bateria no endereço informado pelo cliente, com rapidez e segurança.
-    </p>
-    <p>
-    Nosso atendimento é feito de forma direta, garantindo praticidade durante todo o processo de compra.
-    </p>
-</div>
-
-<div class="section" id="contato">
-    <h2>Contato</h2>
-    <p>Email: contato@expressobaterias.com</p>
-    <p>Telefone: (11) 99999-9999</p>
-    <p>Atendimento em horário comercial</p>
-</div>
-
-<div class="section" id="privacidade">
-    <h2>Política de Privacidade</h2>
-    <p>
-    Respeitamos a privacidade dos usuários e protegemos seus dados conforme a Lei Geral de Proteção de Dados (LGPD).
-    </p>
-    <p>
-    As informações são utilizadas exclusivamente para atendimento e processamento de pedidos.
-    </p>
-</div>
-
-<div class="section" id="termos">
-    <h2>Termos de Uso</h2>
-    <p>
-    Ao utilizar este site, o usuário concorda com as condições aqui descritas.
-    </p>
-    <p>
-    A empresa realiza a venda de produtos e não garante resultados específicos além da qualidade e procedência das baterias comercializadas.
-    </p>
-</div>
-
+<div class="values">
+  <h3>Compromissos</h3>
+  <div class="grid">
+    <div class="box"><strong>01 ✓ Transparência</strong><p>Comunicação clara e direta.</p></div>
+    <div class="box"><strong>02 ✓ Seriedade</strong><p>Atendimento com responsabilidade.</p></div>
+    <div class="box"><strong>03 ✓ Ética</strong><p>Respeito e confiança em cada contato.</p></div>
+  </div>
 </div>
 
 <footer>
-    <p>© 2026 Expresso Baterias LP LTDA - Todos os direitos reservados</p>
+©️ <span id="y"></span> RECALCATTI SEGURANCA PRIVADA LTDA 
 </footer>
+
+<script>
+function waLink(numero, servico){
+  const msg = "Olá! Preciso de atendimento sobre: " + servico;
+  return "https://wa.me/" + numero + "?text=" + encodeURIComponent(msg);
+}
+
+document.getElementById("btnAtendimento").href = "https://wa.me/" + WHATSAPP_ATENDIMENTO;
+document.getElementById("svc2Via").href    = waLink(WHATSAPP_2VIA, "2ª Via");
+document.getElementById("svcSuporte").href = waLink(WHATSAPP_SUPORTE, "Suporte Técnico");
+document.getElementById("svcOutros").href  = waLink(WHATSAPP_OUTROS, "Outros Assuntos");
+
+document.getElementById("y").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
